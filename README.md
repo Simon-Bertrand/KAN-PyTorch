@@ -21,10 +21,8 @@ In this library, the paper from Ziming Liu et al. has been implemented :
 
 
 ```bash
-%%bash
-if !python -c "import torch_cmif" 2>/dev/null; then
-    pip install https://github.com/Simon-Bertrand/FastCMIF-PyTorch/archive/main.zip
-fi
+pip install https://github.com/Simon-Bertrand/KAN-PyTorch/archive/main.zip
+
 ```
 
 # Import library
@@ -32,6 +30,6 @@ fi
 
 
 ```python
-import torch_cmif
+import torch_kan
 ```
 
