@@ -1,0 +1,32 @@
+{
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/.venv": false,
+    "**/build": true,
+    "**/dist": true,
+    "**/*.egg-info": true,
+    "**/.ipynb_checkpoints": true
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "mypy-type-checker.args": ["--disable-error-code=import-untyped"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "black-formatter.args": ["--line-length", "79"],
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.importFormat": "relative",
+  "python.analysis.fixAll": ["source.unusedImports"],
+  "python.analysis.exclude": ["**/build", "**/.venv"],
+  "python.analysis.autoFormatStrings": true,
+  "python.analysis.ignore": [],
+  "notebook.formatOnSave.enabled": true
+}
