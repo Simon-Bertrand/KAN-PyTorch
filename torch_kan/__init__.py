@@ -1,6 +1,4 @@
 
 from .bsplines import BatchedBSplines
-__all__ = ['KAN', 'BatchedBSplines']
-from torch import nn
-class KAN(nn.Module):
-    pass
+from .kan_layer import KANLayer
+__all__ = ['KANLayer', 'BatchedBSplines']
