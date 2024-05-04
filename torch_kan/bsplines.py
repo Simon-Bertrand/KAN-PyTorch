@@ -50,7 +50,7 @@ class BatchedBSplines(nn.Module):
         B = x.size(0)
         outDim = cp.size(1)
 
-        # Pads the control points with k-1 last elements
+        # Pads the control points with k-1 times the last element
         paddedCp = (
             torch.cat(
              [cp]+(self.k - 1)*[cp[..., -1:]], dim=-1
