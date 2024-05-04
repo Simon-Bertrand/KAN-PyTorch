@@ -101,9 +101,13 @@ class BatchedBSplines(nn.Module):
                     / (self.t[j + 1 + leftRange - r] - self.t[j + leftRange - self.k])
                 ).unsqueeze(-2)  # (B, inDim, 1, nEval)
                 # d : (B, inDim, outDim, nEval,  k)
-                d[..., j] = (1.0 - alphas) * d[..., j - 1] + alphas * d[
-                    ..., j
-                ]  #  (B, inDim, outDim, nEval)
+
+                # d[..., j] = (1.0 - alphas) * d[..., j - 1] + alphas * d[..., j] #  (B, inDim, outDim, nEval)
+                d=torch.cat([
+                    d[...,:j],
+                    ((1.0 - alphas) * d[..., j - 1] + alphas * d[..., j]).unsqueeze(-1),
+                    d[...,j+1:],
+                ], dim=-1)
         return d[..., self.k]  #  (B, inDim, outDim, nEval)
 
 
