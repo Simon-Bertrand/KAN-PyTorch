@@ -1,6 +1,9 @@
 # Python library : torch_kan
 
-The torch_kan of the KAN on PyTorch.
+Simple implementation of a KAN Layer following the below paper. We use an optimized version of B-Splines computation.
+Only grid extension feature is implemented, where you are able to arbitrary increase the number of control points to get less smooth splines curves.
+We try the simple MNIST classification task using KAN in the example/sb folder.
+We are open for PR concerning library improvements, adding missing features such as automatic pruning and fixing symbolics and correcting wrong interpretation of the original paper.
 <br />
 <br />
 <br />
